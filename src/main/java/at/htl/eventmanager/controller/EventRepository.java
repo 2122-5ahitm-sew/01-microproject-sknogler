@@ -24,8 +24,8 @@ public class EventRepository {
         return event;
     }
 
-    public void delete(Event product) {
-        events.remove(product.getId());
+    public void delete(long id) {
+        events.remove(id);
     }
 
     public Event findById(long id) {

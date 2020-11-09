@@ -47,7 +47,7 @@ public class EventService {
     @Path("/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public void delete(@PathParam("id") long id) {
-        repository.delete(new Event(id, "", -1));
+        repository.delete(id);
     }
 
     private Event save(Event Event) {

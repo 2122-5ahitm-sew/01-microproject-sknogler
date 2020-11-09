@@ -1,0 +1,29 @@
+### find all events
+GET http://localhost:8080/events/findAll
+
+### find event by id
+GET http://localhost:8080/events/findById/1
+
+### update event
+PUT http://localhost:8080/events/update/
+Content-Type: application/json
+
+{
+  "name": "KonzertXY",
+  "date": "11.August.2021",
+  "id": 1
+}
+
+### add event
+POST http://localhost:8080/events/add/
+Content-Type: application/json
+
+{
+  "name": "SymposiumXY",
+  "date": "19.Mai.2021",
+  "id": 2
+}
+
+
+### delete event
+DELETE http://localhost:8080/events/delete/1
