@@ -1,0 +1,29 @@
+### find all hosts
+GET http://localhost:8080/hosts/findAll
+
+### find event by id
+GET http://localhost:8080/hosts/findById/1
+
+### update event
+PUT http://localhost:8080/hosts/update/
+Content-Type: application/json
+
+{
+  "name": "Herr Huber",
+  "ssn": "46069999",
+  "id": 1
+}
+
+### add event
+POST http://localhost:8080/hosts/add/
+Content-Type: application/json
+
+{
+  "name": "Straßer Erns",
+  "ssn": "33008998",
+  "id": 1
+}
+
+
+### delete event
+DELETE http://localhost:8080/hosts/delete/1
