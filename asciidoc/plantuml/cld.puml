@@ -1,7 +1,17 @@
 @startuml
 
-class Entity{
-
+class Event{
+  - String name;
+  - String date;
+  - long id;
 }
+
+class Host{
+  - String name;
+  - long ssn;
+  - long id;
+}
+
+Host "1" -- "*" Event : hosts
 
 @enduml
