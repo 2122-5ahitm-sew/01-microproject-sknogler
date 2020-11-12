@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.inject.Inject;
+
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,25 +16,25 @@ class EventRepositoryTest {
     Event event;
 
     @BeforeEach
-    void beforeEach(){
+    void beforeEach() {
         event = new Event("KonzertXY", "22.August.2020", 1);
         repository = new EventRepository();
     }
 
     @Test
-    void addTest(){
+    void addTest() {
         repository.save(event);
         assertThat(repository.events).hasSize(1);
     }
 
     @Test
-    void getByIdTest(){
+    void getByIdTest() {
         repository.save(event);
         assertThat(repository.events.get(1L)).isEqualTo(event);
     }
 
     @Test
-    void deleteTest(){
+    void deleteTest() {
         repository.save(event);
         assertThat(repository.events).hasSize(1);
 
@@ -43,7 +43,7 @@ class EventRepositoryTest {
     }
 
     @Test
-    void findByIdTest(){
+    void findByIdTest() {
         repository.save(event);
         Event event2 = new Event("Comedian", "1.Jänner.2022", 2);
         repository.save(event2);
@@ -53,7 +53,7 @@ class EventRepositoryTest {
     }
 
     @Test
-    void findAllTest(){
+    void findAllTest() {
         repository.save(event);
         Event event2 = new Event("Comedian", "1.Jänner.2022", 2);
         repository.save(event2);
@@ -61,5 +61,4 @@ class EventRepositoryTest {
         repository.findAll();
         assertThat(repository.findAll()).hasSize(2);
     }
-
 }

@@ -12,7 +12,7 @@ import java.util.List;
 public class HostRepository {
 
     private static HostRepository instance;
-    private final HashMap<Long, Host> hosts = new HashMap<>();
+    HashMap<Long, Host> hosts = new HashMap<>();
 
     public static HostRepository getInstance() {
         if (instance == null) {
