@@ -26,4 +26,40 @@ class EventRepositoryTest {
         repository.save(event);
         assertThat(repository.events).hasSize(1);
     }
+
+    @Test
+    void getByIdTest(){
+        repository.save(event);
+        assertThat(repository.events.get(1L)).isEqualTo(event);
+    }
+
+    @Test
+    void deleteTest(){
+        repository.save(event);
+        assertThat(repository.events).hasSize(1);
+
+        repository.delete(1);
+        assertThat(repository.events).hasSize(0);
+    }
+
+    @Test
+    void findByIdTest(){
+        repository.save(event);
+        Event event2 = new Event("Comedian", "1.Jänner.2022", 2);
+        repository.save(event2);
+        assertThat(repository.events).hasSize(2);
+
+        assertThat(repository.findById(2)).isEqualTo(event2);
+    }
+
+    @Test
+    void findAllTest(){
+        repository.save(event);
+        Event event2 = new Event("Comedian", "1.Jänner.2022", 2);
+        repository.save(event2);
+
+        repository.findAll();
+        assertThat(repository.findAll()).hasSize(2);
+    }
+
 }
