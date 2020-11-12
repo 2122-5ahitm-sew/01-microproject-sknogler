@@ -10,7 +10,7 @@ import java.util.List;
 public class EventRepository {
 
     private static EventRepository instance;
-    private final HashMap<Long, Event> events = new HashMap<>();
+    HashMap<Long, Event> events = new HashMap<>();
 
     public static EventRepository getInstance() {
         if (instance == null) {
@@ -35,7 +35,6 @@ public class EventRepository {
     }
 
     public List<Event> findAll() {
-        return List.copyOf(events.values());
-    }
+        return List.copyOf(events.values());}
 
 }
