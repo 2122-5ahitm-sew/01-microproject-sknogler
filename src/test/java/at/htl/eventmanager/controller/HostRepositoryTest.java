@@ -48,4 +48,14 @@ class HostRepositoryTest {
 
         assertThat(repository.findById(2)).isEqualTo(host2);
     }
+
+    @Test
+    void findAllTest() {
+        repository.save(host);
+        Host host2 = new Event("Herr Müller", 333333, 2);
+        repository.save(host2);
+
+        repository.findAll();
+        assertThat(repository.findAll()).hasSize(2);
+    }
 }
