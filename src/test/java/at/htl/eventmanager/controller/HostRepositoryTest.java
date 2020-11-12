@@ -24,4 +24,10 @@ class HostRepositoryTest {
         assertThat(repository.hosts).hasSize(1);
     }
 
+    @Test
+    void getByIdTest() {
+        repository.save(host);
+        assertThat(repository.hosts.get(1L)).isEqualTo(host);
+    }
+
 }
