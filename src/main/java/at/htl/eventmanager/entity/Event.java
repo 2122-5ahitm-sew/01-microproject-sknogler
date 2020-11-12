@@ -40,4 +40,13 @@ public class Event {
     public void setId(long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "name='" + name + '\'' +
+                ", date='" + date + '\'' +
+                ", id=" + id +
+                '}';
+    }
 }

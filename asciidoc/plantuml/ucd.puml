@@ -7,11 +7,16 @@ package Eventmanager {
   usecase "deletes Host" as UC2
   usecase "creates new Event" as UC3
   usecase "deletes Event" as UC4
+  usecase "searches for Host" as UC5
+  usecase "searches for Event" as UC6
 }
 g --> UC1
 g --> UC2
 
 g --> UC3
 g --> UC4
+
+g --> UC5
+g --> UC6
 
 @enduml
