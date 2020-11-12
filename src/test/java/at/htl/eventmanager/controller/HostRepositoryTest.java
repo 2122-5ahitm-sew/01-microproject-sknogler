@@ -30,4 +30,12 @@ class HostRepositoryTest {
         assertThat(repository.hosts.get(1L)).isEqualTo(host);
     }
 
+    @Test
+    void deleteTest() {
+        repository.save(host);
+        assertThat(repository.hosts).hasSize(1);
+
+        repository.delete(1);
+        assertThat(repository.hosts).hasSize(0);
+    }
 }
