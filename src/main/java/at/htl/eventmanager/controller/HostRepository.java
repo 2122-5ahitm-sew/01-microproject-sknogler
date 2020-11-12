@@ -3,9 +3,12 @@ package at.htl.eventmanager.controller;
 import at.htl.eventmanager.entity.Event;
 import at.htl.eventmanager.entity.Host;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.ws.rs.ApplicationPath;
 import java.util.HashMap;
 import java.util.List;
 
+@ApplicationScoped
 public class HostRepository {
 
     private static HostRepository instance;

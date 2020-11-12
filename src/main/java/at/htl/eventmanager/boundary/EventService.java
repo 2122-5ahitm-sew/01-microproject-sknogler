@@ -3,6 +3,7 @@ package at.htl.eventmanager.boundary;
 import at.htl.eventmanager.controller.EventRepository;
 import at.htl.eventmanager.entity.Event;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.Objects;
 @Path("/events")
 public class EventService {
 
-    private final EventRepository repository = EventRepository.getInstance();
+    @Inject
+    private EventRepository repository;
 
     @GET
     @Path("/findAll")

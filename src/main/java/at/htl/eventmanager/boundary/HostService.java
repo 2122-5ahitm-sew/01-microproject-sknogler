@@ -5,6 +5,7 @@ import at.htl.eventmanager.controller.HostRepository;
 import at.htl.eventmanager.entity.Event;
 import at.htl.eventmanager.entity.Host;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -13,7 +14,8 @@ import java.util.Objects;
 @Path("/events")
 public class HostService {
 
-    private final HostRepository repository = HostRepository.getInstance();
+    @Inject
+    private HostRepository repository;
 
     @GET
     @Path("/findAll")

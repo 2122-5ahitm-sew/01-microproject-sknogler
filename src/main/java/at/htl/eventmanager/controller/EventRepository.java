@@ -2,9 +2,11 @@ package at.htl.eventmanager.controller;
 
 import at.htl.eventmanager.entity.Event;
 
+import javax.enterprise.context.ApplicationScoped;
 import java.util.HashMap;
 import java.util.List;
 
+@ApplicationScoped
 public class EventRepository {
 
     private static EventRepository instance;
