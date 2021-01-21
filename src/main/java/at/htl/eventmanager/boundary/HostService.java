@@ -21,7 +21,7 @@ public class HostService {
     @Path("/findAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Host> findAll() {
-        return repository.findAll();
+        return repository.listAll();
     }
 
     @GET
@@ -57,5 +57,4 @@ public class HostService {
     private Host save(Host Host) {
         return repository.save(Host);
     }
-
 }

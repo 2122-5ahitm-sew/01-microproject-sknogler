@@ -19,7 +19,7 @@ public class EventService {
     @Path("/findAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> findAll() {
-        return repository.findAll();
+        return repository.listAll();
     }
 
     @GET
@@ -55,5 +55,4 @@ public class EventService {
     private Event save(Event Event) {
         return repository.save(Event);
     }
-
 }

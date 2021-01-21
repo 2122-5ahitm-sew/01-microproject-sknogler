@@ -27,3 +27,22 @@ Content-Type: application/json
 
 ### delete event
 DELETE http://localhost:8080/events/delete/1
+
+###
+PUT http://localhost:8080/persons/1
+Content-Type: application/json
+
+{
+  "name": "Meris",
+  "attribute": "gay",
+  "sexiness": 3
+}
+
+###
+
+POST http://localhost:8080/persons/1
+Content-Type: application/json
+
+{
+  "attribute": "hella gay"
+}

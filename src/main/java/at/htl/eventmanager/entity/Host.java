@@ -1,10 +1,15 @@
 package at.htl.eventmanager.entity;
 
-public class Host {
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
 
-    private String name;
-    private long ssn;
-    private long id;
+import javax.persistence.Entity;
+
+@Entity
+public class Host extends PanacheEntity {
+
+    public String name;
+    public long ssn;
+    public long id;
 
     public Host(String name, long ssn, long id) {
         this.name = name;

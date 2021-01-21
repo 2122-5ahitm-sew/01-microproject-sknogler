@@ -2,14 +2,17 @@ package at.htl.eventmanager.controller;
 
 import at.htl.eventmanager.entity.Event;
 import at.htl.eventmanager.entity.Host;
+import io.quarkus.hibernate.orm.panache.PanacheRepository;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.transaction.Transactional;
 import javax.ws.rs.ApplicationPath;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 @ApplicationScoped
-public class HostRepository {
+public class HostRepository implements PanacheRepository {
 
     private static HostRepository instance;
     HashMap<Long, Host> hosts = new HashMap<>();
@@ -23,11 +26,13 @@ public class HostRepository {
     }
 
     // add & update
+    @Transactional
     public Host save(Host host) {
         hosts.put(host.getId(), host);
         return host;
     }
 
+    @Transactional
     public void delete(long id) {
         hosts.remove(id);
     }
@@ -36,8 +41,8 @@ public class HostRepository {
         return hosts.get(id);
     }
 
-    public List<Host> findAll() {
-        return List.copyOf(hosts.values());
+    public List<Host> listAll() {
+        return new ArrayList<Host>(hosts.values());
     }
 
 }

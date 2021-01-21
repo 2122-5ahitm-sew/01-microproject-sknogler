@@ -1,11 +1,15 @@
 package at.htl.eventmanager.entity;
 
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+
+import javax.persistence.Entity;
 import java.util.Date;
 
-public class Event {
+@Entity
+public class Event extends PanacheEntity {
 
-    private String name;
-    private String date;
+    public String name;
+    public String date;
     private long id;
 
     public Event(String name, String date, long id) {

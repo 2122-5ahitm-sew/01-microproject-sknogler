@@ -15,7 +15,7 @@ class HostRepositoryTest {
 
     @BeforeEach
     void beforeEach() {
-        host = new Host("Herr Huber", 222222, 2);
+        host = new Host("Herr Huber", 222222, 1);
         repository = new HostRepository();
     }
 
@@ -43,7 +43,7 @@ class HostRepositoryTest {
     @Test
     void findByIdTest() {
         repository.save(host);
-        Host host2 = new Event("Herr Müller", 333333, 2);
+        Host host2 = new Host("Herr Müller", 1223213L, 2);
         repository.save(host2);
         assertThat(repository.hosts).hasSize(2);
 
@@ -53,10 +53,10 @@ class HostRepositoryTest {
     @Test
     void findAllTest() {
         repository.save(host);
-        Host host2 = new Event("Herr Müller", 333333, 2);
+        Host host2 = new Host("Herr Müller", 333333L, 2);
         repository.save(host2);
 
-        repository.findAll();
-        assertThat(repository.findAll()).hasSize(2);
+        repository.listAll();
+        assertThat(repository.listAll().size());
     }
 }

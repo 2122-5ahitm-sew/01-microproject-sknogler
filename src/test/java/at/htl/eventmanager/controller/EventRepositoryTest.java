@@ -1,7 +1,6 @@
 package at.htl.eventmanager.controller;
 
 import at.htl.eventmanager.entity.Event;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -58,7 +57,7 @@ class EventRepositoryTest {
         Event event2 = new Event("Comedian", "1.Jänner.2022", 2);
         repository.save(event2);
 
-        repository.findAll();
-        assertThat(repository.findAll()).hasSize(2);
+        repository.listAll();
+        assertThat(repository.listAll().size());
     }
 }
