@@ -13,7 +13,7 @@ import java.util.List;
 @ApplicationScoped
 public class EventRepository implements PanacheRepository {
 
-    private static EventRepository instance;
+    public static EventRepository instance;
     HashMap<Long, Event> events = new HashMap<>();
 
     public static EventRepository getInstance() {

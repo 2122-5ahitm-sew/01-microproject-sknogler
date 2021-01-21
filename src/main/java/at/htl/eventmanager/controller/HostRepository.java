@@ -14,7 +14,7 @@ import java.util.List;
 @ApplicationScoped
 public class HostRepository implements PanacheRepository {
 
-    private static HostRepository instance;
+    public static HostRepository instance;
     HashMap<Long, Host> hosts = new HashMap<>();
 
     public static HostRepository getInstance() {
