@@ -4,6 +4,7 @@ import at.htl.eventmanager.controller.EventRepository;
 import at.htl.eventmanager.entity.Event;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -19,40 +20,41 @@ public class EventService {
     @Path("/findAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> findAll() {
-        return findAll();
+        return repository.listAll();
     }
 
     @GET
     @Path("/findById/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Event findById(@PathParam("id") long id) {
-        return findById(id);
+        return repository.findById(id);
     }
 
     @PUT
     @Path("/update")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional
     public Event update(Event event) {
-        return update(event);
+        repository.update("id = " + event.id, event);
+        return repository.findById(event.id);
     }
 
     @POST
     @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional
     public Event add(Event event) {
-        return add(event);
+        repository.persist(event);
+        return repository.findById(event.id);
     }
 
     @DELETE
     @Path("/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
+    @Transactional
     public void delete(@PathParam("id") long id) {
-        delete(id);
-    }
-
-    private Event save(Event event) {
-        return save(event);
+        repository.delete(repository.findById(id));
     }
 }
