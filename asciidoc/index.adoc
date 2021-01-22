@@ -1,4 +1,4 @@
-[plantuml, cld, png, align=left]
+[plantuml,cld,png,align=left]
 ----
 include::plantuml/cld.puml[]
 ----

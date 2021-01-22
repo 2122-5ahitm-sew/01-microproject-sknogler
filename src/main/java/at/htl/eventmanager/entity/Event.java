@@ -10,7 +10,7 @@ public class Event extends PanacheEntity {
 
     public String name;
     public String date;
-    private long id;
+    public long id;
 
     public Event(String name, String date, long id) {
         this.name = name;
@@ -19,30 +19,6 @@ public class Event extends PanacheEntity {
     }
 
     public Event() {
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     @Override

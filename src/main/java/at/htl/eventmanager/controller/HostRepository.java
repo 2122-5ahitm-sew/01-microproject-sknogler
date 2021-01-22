@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @ApplicationScoped
-public class HostRepository implements PanacheRepository {
+public class HostRepository implements PanacheRepository<Host> {
 
     public static HostRepository instance;
     HashMap<Long, Host> hosts = new HashMap<>();
@@ -24,25 +24,4 @@ public class HostRepository implements PanacheRepository {
 
         return instance;
     }
-
-    // add & update
-    @Transactional
-    public Host save(Host host) {
-        hosts.put(host.getId(), host);
-        return host;
-    }
-
-    @Transactional
-    public void delete(long id) {
-        hosts.remove(id);
-    }
-
-    public Host findById(long id) {
-        return hosts.get(id);
-    }
-
-    public List<Host> listAll() {
-        return new ArrayList<Host>(hosts.values());
-    }
-
 }

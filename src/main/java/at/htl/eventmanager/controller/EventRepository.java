@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @ApplicationScoped
-public class EventRepository implements PanacheRepository {
+public class EventRepository implements PanacheRepository<Event> {
 
     public static EventRepository instance;
     HashMap<Long, Event> events = new HashMap<>();
@@ -23,25 +23,4 @@ public class EventRepository implements PanacheRepository {
 
         return instance;
     }
-
-    // add & update
-    @Transactional
-    public Event save(Event event) {
-        events.put(event.getId(), event);
-        return event;
-    }
-
-    @Transactional
-    public void delete(long id) {
-        events.remove(id);
-    }
-
-    public Event findById(long id) {
-        return events.get(id);
-    }
-
-    public List<Event> listAll() {
-        return new ArrayList<Event>(events.values());
-    }
-
 }

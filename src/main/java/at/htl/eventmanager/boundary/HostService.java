@@ -21,40 +21,40 @@ public class HostService {
     @Path("/findAll")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Host> findAll() {
-        return repository.listAll();
+        return findAll();
     }
 
     @GET
     @Path("/findById/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Host findById(@PathParam("id") long id) {
-        return Objects.requireNonNullElseGet(repository.findById(id), Host::new);
+        return findById(id);
     }
 
     @PUT
     @Path("/update")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Host update(Host Host) {
-        return save(Host);
+    public Host update(Host host) {
+        return update(host);
     }
 
     @POST
     @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Host add(Host Host) {
-        return save(Host);
+    public Host add(Host host) {
+        return add(host);
     }
 
     @DELETE
     @Path("/delete/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public void delete(@PathParam("id") long id) {
-        repository.delete(id);
+        delete(id);
     }
 
-    private Host save(Host Host) {
-        return repository.save(Host);
+    private Host save(Host host) {
+        return save(host);
     }
 }
