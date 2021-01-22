@@ -19,9 +19,9 @@ POST http://localhost:8080/hosts/add/
 Content-Type: application/json
 
 {
-  "name": "Straßer Erns",
+  "name": "Straßer Ernst",
   "ssn": "33008998",
-  "id": 1
+  "id": 2
 }
 
 
