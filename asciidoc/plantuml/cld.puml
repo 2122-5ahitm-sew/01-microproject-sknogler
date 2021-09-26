@@ -3,15 +3,23 @@
 class Event{
   - String name;
   - String date;
-  - long id;
+  - long eventId;
 }
 
 class Host{
   - String name;
   - long ssn;
-  - long id;
+  - long hostID;
+}
+
+class Location{
+  - long locationID;
+  - String name;
+  - String address;
+  - long priceperhour;
 }
 
 Host "1" -- "*" Event : hosts
+Event "1" == "1" Location : has
 
 @enduml

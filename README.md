@@ -7,7 +7,3 @@ The idea of this project is a simple quarkus application, which can be used to m
 ### Class Diagramm
 
 ![image](asciidoc/images/cld.png)
-
-### Use-Case-Diagram
-
-![image](asciidoc/images/ucd.png)
