@@ -6,4 +6,4 @@ The idea of this project is a simple quarkus application, which can be used to m
 
 ### Class Diagramm
 
-![image](../asciidoc/images/cld.png)
+![image](asciidoc/images/cld.png)

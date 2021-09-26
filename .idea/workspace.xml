@@ -5,69 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5fdcbd7-d30d-4010-a8bd-bd931eab539c" name="Default Changelist" comment="CLD added">
-      <change afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/http-request/event.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/http-request/host.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/docker/Dockerfile.fast-jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/docker/Dockerfile.jvm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/docker/Dockerfile.native" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/boundary/EventService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/boundary/HostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/controller/EventRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/controller/HostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/entity/Event.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/entity/Host.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/at/htl/eventmanager/entity/Location.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/java/org/acme/resteasy/ExampleResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/META-INF/resources/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/at/htl/eventmanager/boundary/EventServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/at/htl/eventmanager/boundary/HostServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/at/htl/eventmanager/controller/EventRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/at/htl/eventmanager/controller/HostRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/at/htl/eventmanager/entity/EventTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/at/htl/eventmanager/entity/HostTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/org/acme/resteasy/ExampleResourceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/src/test/java/org/acme/resteasy/NativeExampleResourceIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-request/event.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-request/host.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/docker/Dockerfile.fast-jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/docker/Dockerfile.jvm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/docker/Dockerfile.native" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/eventmanager/boundary/EventService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/eventmanager/boundary/HostService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/eventmanager/controller/EventRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/eventmanager/controller/HostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/eventmanager/entity/Event.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/eventmanager/entity/Host.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/acme/resteasy/ExampleResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/eventmanager/boundary/EventServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/eventmanager/boundary/HostServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/eventmanager/controller/EventRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/eventmanager/controller/HostRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/eventmanager/entity/EventTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/at/htl/eventmanager/entity/HostTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/acme/resteasy/ExampleResourceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/acme/resteasy/NativeExampleResourceIT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632671044001</updated>
-      <workItem from="1632671045417" duration="1104000" />
+      <workItem from="1632671045417" duration="1115000" />
     </task>
     <task id="LOCAL-00001" summary="CLD added">
       <created>1632671228294</created>
