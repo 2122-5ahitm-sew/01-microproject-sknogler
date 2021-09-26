@@ -11,7 +11,7 @@ release.properties
 bin/
 
 # IntelliJ
-.idea
+backend/.idea
 *.ipr
 *.iml
 *.iws
@@ -33,4 +33,4 @@ nb-configuration.xml
 # patch
 *.orig
 *.rej
-
+/.idea/
