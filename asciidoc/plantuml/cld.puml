@@ -4,6 +4,8 @@ class Event{
   - String name;
   - String date;
   - long eventID;
+  - Host host;
+  - Location location;
 }
 
 class Host{
