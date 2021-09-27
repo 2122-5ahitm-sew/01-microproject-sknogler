@@ -20,6 +20,6 @@ class Location{
 }
 
 Host "1" -- "*" Event : hosts
-Event "1" == "1" Location : has
+Event "*" == "1" Location : has
 
 @enduml
